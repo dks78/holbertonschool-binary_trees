@@ -2,22 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * binary_tree_insert_right - Insère un nœud comme enfant gauche d'un parent
- * @parent: Pointeur vers le parent
- * @value: Valeur à stocker dans le nouveau nœud
+ * binary_tree_delete - Supprime un arbre binaire.
+ * @tree: Pointeur vers la racine de l'arbre à supprimer.
  *
- * Return: Pointeur vers le nouveau nœud, ou NULL si une erreur se produit
+ * Cette fonction supprime récursivement tous les nœuds de l'arbre en
+ * appelant la fonction sur les sous-arbres gauche et droit, puis
+ * libère la mémoire allouée pour chaque nœud.
  */
- void binary_tree_delete(binary_tree_t *tree)
- {
-    if(tree == NULL)
-    {
-        return;
-    }
+void binary_tree_delete(binary_tree_t *tree)
+{
+if (tree == NULL)
 
-    binary_tree_delete(tree->right);
-    binary_tree_delete(tree->left);
+{
+return;
+}
+
+binary_tree_delete(tree->right);
+binary_tree_delete(tree->left);
 
 
-    free(tree);
- }
+free(tree);
+}

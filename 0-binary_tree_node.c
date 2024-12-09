@@ -1,20 +1,27 @@
 #include "binary_trees.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * binary_tree_node - Crée un nouveau nœud dans un arbre binaire
+ * @parent: Pointeur vers le parent du nouveau nœud
+ * @value: Valeur à insérer dans le nouveau nœud
+ *
+ * Return: Pointeur vers le nouveau nœud, ou NULL en cas d'échec
+ */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *node = malloc(sizeof(binary_tree_t)); /* Allocation de mémoire pour le noeud */
+binary_tree_t *node = malloc(sizeof(binary_tree_t));
 
-    if (node == NULL) {
-        fprintf(stderr, "Erreur sur l'allocation\n");
-        exit(EXIT_FAILURE);
-    } /*verifie si la mémoir c'est bien passé*/
+if (node == NULL)
+{
+fprintf(stderr, "Erreur sur l'allocation\n");
+exit(EXIT_FAILURE);
+}
 
-    node->n = value; /* Assigner la valeur au membre correct */
-   node->parent = parent;
-   node->left = NULL;
-   node->right = NULL;
+node->n = value;
+node->parent = parent;
+node->left = NULL;
+node->right = NULL;
 
-   return node;
+return (node);
 }

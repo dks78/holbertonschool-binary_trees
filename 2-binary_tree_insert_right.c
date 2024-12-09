@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * binary_tree_insert_left - Insère un nœud comme enfant gauche d'un parent
+ * binary_tree_insert_right - Insère un nœud comme enfant gauche d'un parent
  * @parent: Pointeur vers le parent
  * @value: Valeur à stocker dans le nouveau nœud
  *
@@ -10,25 +10,23 @@
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-    binary_tree_t *node;
+binary_tree_t *node;
 
+if (parent == NULL)
+{
+return (NULL);
+}
 
-    if (parent == NULL)
-    {
-        return (NULL);
-    }
-    
+node = binary_tree_node(parent, value);
 
-    node = binary_tree_node(parent, value);
+if (parent->right != NULL)
+{
+node->right = parent->right;
 
-    if (parent->right != NULL)
-    {
-        node->right = parent->right;
+parent->right->parent = node;
+}
 
-        parent->right->parent = node;
-    }
+parent->right = node;
 
-    parent->right = node;
-
-    return (node);
+return (node);
 }

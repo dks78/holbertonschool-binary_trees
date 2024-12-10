@@ -20,6 +20,6 @@ while (current != NULL)
 current = current->parent; /*Remonte vers le parent*/
 depth++; /*Incrémente la profondeur à chaque niveau*/
 }
-return (depth (-1));
+return (depth -1);
 }
 

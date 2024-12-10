@@ -1,13 +1,16 @@
 /**
- * binary_tree_insert_left - Inserts a node as the left child of a parent node.
+ * binary_tree_insert_right - Inserts a node as the
+ * left child of a parent node.
  * @parent: A pointer to the parent node where the left child will be inserted.
  * @value: The value to store in the new left child node.
- * 
- * Description: This function creates a new node and inserts it as the left child
+ *
+ * Description: This function creates a new
+ * node and inserts it as the left child
  * of the specified parent node. If the parent already has a left child, the
  * current left child will be moved to the right of the new node.
- * 
- * Return: A pointer to the newly created node, or NULL if memory allocation fails
+ *
+ * Return: A pointer to the newly created node,
+ * or NULL if memory allocation fails
  *         or if the parent is NULL.
  */
 

@@ -3,7 +3,8 @@
  * @tree: A pointer to the root node of the tree to delete.
  *
  * Description: This function recursively deletes the nodes of a binary tree.
- * It starts from the root node and proceeds to delete its left and right children
+ * It starts from the root node and proceeds
+ * to delete its left and right children
  * before freeing the current node.
  *
  * Return: None

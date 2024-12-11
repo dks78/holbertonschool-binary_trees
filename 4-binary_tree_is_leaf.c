@@ -24,9 +24,6 @@ if (node->left == NULL && node->right == NULL)
 return (1);
 }
 
-else
-{
 return (0);
-}
 
 }

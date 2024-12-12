@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_full - Vérifie si un arbre binaire est complet
+ * binary_tree_size - Vérifie si un arbre binaire est complet
  * @tree: Pointeur vers la racine de l'arbre
  *
  * Return: 1 si l'arbre est complet, 0 sinon
@@ -14,6 +14,13 @@ return (0);
 return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
 
+
+/**
+ * binary_tree_is_full - Vérifie si un arbre binaire est complet
+ * @tree: Pointeur vers la racine de l'arbre
+ *
+ * Return: 1 si l'arbre est complet, 0 sinon
+ */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
 /* Si l'arbre est vide, il n'est pas complet */

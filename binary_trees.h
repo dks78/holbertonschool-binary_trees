@@ -38,7 +38,7 @@ int binary_tree_balance(const binary_tree_t *tree);
 int height(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-int is_Perfect_recursive(const binary_tree_t *root, int depth, int level);
+int is_Perfect_recursive(const binary_tree_t *tree, int depth, int level);
 size_t binary_tree_depth(const binary_tree_t *tree);
 size_t binary_tree_height(const binary_tree_t *tree);
 #endif
